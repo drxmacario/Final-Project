@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>My Routine | Rotina Saudável</title>
+    <!-- Google Fonts + Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <i class="fas fa-calendar-check"></i>
+                <span>My Routine</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-bag"></i> My Cart</h3>
+            <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <div class="empty-cart-msg">
+                <i class="fas fa-box-open"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="btn-finalizar" id="finalizarBtn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <main>
+        <!-- HOME Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge">✨ Available Now</span>
+                    <h1>Want to start therapy but have a <span class="gradient-text">messy routine?</span></h1>
+                    <p>Don't worry! Download this app and get:</p>
+                    <ul class="hero-list">
+                        <li><i class="fas fa-check-circle"></i> A healthier routine in your way</li>
+                        <li><i class="fas fa-chart-line"></i> Before-and-after comparison to track your progress</li>
+                        <li><i class="fas fa-clock"></i> An improvement in your procrastination</li>
+                    </ul>
+                    <div class="hero-buttons">
+                        <a href="#shop" class="btn-primary">Shop Tools <i class="fas fa-arrow-right"></i></a>
+                        <a href="#about" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img\my routine logo.jpeg" alt="My Routine App">
+                </div>
+            </div>
+        </section>
+
+        <!-- SHOP Section - PRODUTOS COM IMAGENS NO HTML -->
+        <section class="shop" id="shop">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shop <span class="destaque">Routine Tools</span></h2>
+                    <p>Products to help you build better habits</p>
+                </div>
+                <div class="produtos-grid" id="produtosGrid">
+                    <!-- Produto 1 -->
+                    <div class="produto-card" data-id="1" data-name="Daily Planner" data-price="24.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Daily+Planner">
+                        <div class="produto-img">
+                            <img src="img\calming scented candles.jpeg" alt="Daily Planner">
+                        </div>
+                        <h3>Calming Scented Candles</h3>
+                        <p class="produto-desc">Create a peaceful and relaxing atmosphere</p>
+                        <div class="preco">$14.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class="produto-card" data-id="2" data-name="Progress Journal" data-price="19.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Progress+Journal">
+                        <div class="produto-img">
+                            <img src="img\die.jpeg" alt="Progress Journal">
+                        </div>
+                        <h3>Relaxing Die</h3>
+                        <p class="produto-desc">Helps you relax with every roll</p>
+                        <div class="preco">$9.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="produto-card" data-id="3" data-name="Focus Timer" data-price="34.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Focus+Timer">
+                        <div class="produto-img">
+                            <img src="img\FidgetSpinner1.jpg" alt="Focus Timer">
+                        </div>
+                        <h3>Fidget Spinner</h3>
+                        <p class="produto-desc">A smooth fidget toy that helps reduce stress and improve focus</p>
+                        <div class="preco">$11.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+
+                    <!-- Produto 4 -->
+                    <div class="produto-card" data-id="4" data-name="Habit Tracker" data-price="29.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Habit+Tracker">
+                        <div class="produto-img">
+                            <img src="img\foam ball.jpeg" alt="Habit Tracker">
+                        </div>
+                        <h3>Foam Ball</h3>
+                        <p class="produto-desc">A soft foam ball that relieves stress with every squeeze</p>
+                        <div class="preco">$6.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="produto-card" data-id="5" data-name="Routine Cards" data-price="15.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Routine+Cards">
+                        <div class="produto-img">
+                            <img src="img\keyboard.jpeg" alt="Routine Cards">
+                        </div>
+                        <h3>Keyboard</h3>
+                        <p class="produto-desc">A relaxing keyboard that produces soothing sounds to ease stress and calm mind</p>
+                        <div class="preco">$15.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+
+                    <!-- Produto 6 -->
+                    <div class="produto-card" data-id="6" data-name="Mindfulness Kit" data-price="49.90" data-image="https://placehold.co/300x200/9bbde8/ffffff?text=Mindfulness+Kit">
+                        <div class="produto-img">
+                            <img src="img\Magnectic Magic Cube.jpg" alt="Mindfulness Kit">
+                        </div>
+                        <h3>Magnectic Rubik's Cube</h3>
+                        <p class="produto-desc">A magnectic magic cube that boosts focus and relieves stress with every twist.</p>
+                        <div class="preco">$16.90</div>
+                        <button class="btn-comprar">Add to Cart <i class="fas fa-plus-circle"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US Section -->
+        <section class="about" id="about">
+            <div class="container about-container">
+                <div class="about-img">
+                    <img src="img\my routine logo.jpeg" alt="About My Routine">
+                </div>
+                <div class="about-text">
+                    <h3>About Us</h3>
+                    <h2>Your journey to a <span>healthier routine</span> starts here</h2>
+                    <p>At <strong>My Routine</strong>, we believe that small daily habits lead to big life transformations. Our store was born from the desire to help people like you build consistent routines, beat procrastination, and achieve a healthier, more balanced life.</p>
+                    <p>We offer carefully curated tools — from daily planners and habit trackers to mindfulness kits and focus timers — all designed to support your personal growth. Whether you're starting therapy, organizing your day, or simply looking to improve your well-being, our products are here to guide you every step of the way.</p>
+                    <p>Join thousands of users who have transformed their routines and discovered the power of consistency. Your best self is just a habit away.</p>
+                    <div class="features">
+                        <div><i class="fas fa-chart-simple"></i> Track progress</div>
+                        <div><i class="fas fa-brain"></i> Beat procrastination</div>
+                        <div><i class="fas fa-heart"></i> Healthier routine</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT Section -->
+        <section class="contact" id="contact">
+            <div class="container contact-card">
+                <div class="contact-info">
+                    <h3>Get in touch</h3>
+                    <p>Questions about our routine tools? We're here to help you build better habits.</p>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@myroutine.com</li>
+                        <li><i class="fab fa-whatsapp"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri 9am - 6pm</li>
+                    </ul>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Your name" id="contactName" required>
+                    <input type="email" placeholder="Your email" id="contactEmail" required>
+                    <textarea rows="3" placeholder="Your message..." id="contactMsg" required></textarea>
+                    <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo-footer"><i class="fas fa-calendar-check"></i> My Routine</div>
+                <p>Personalized healthy routine for your life.</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Routine Ave, NY 10001</p>
+                <p><i class="fas fa-phone-alt"></i> +1 (555) 300-4000</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 My Routine - All rights reserved. Build better habits today.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
